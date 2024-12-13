@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المعسكرات التدريبية</title>
+
+    <style>
+        .body { 
+            background-color: #1E2949; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0%;
+        }
+        main{ flex: 1; }
+        .header {
+            text-align: center; 
+            color: white;
+        }
+        .description { 
+            text-align: center; 
+            color: white;
+            font-size: 17px;
+        }
+        .cards-container {
+            display: flex;  /* يجعل الحاوية تستخدم flexbox */
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 0px; /* المسافه بين الكروت */
+            padding: 20px;
+            max-width: 1300px;
+            margin: auto;
+        }
+        .card-image {
+        width: 100%;            /* عرض الصورة بكامل عرض البطاقة */
+        height: 150px;          /* ارتفاع ثابت للصورة */
+        object-fit: cover;      /* التأكد من أن الصورة لا تتشوه */
+        border-radius: 8px;     /* حواف مستديرة للصورة */
+        margin-bottom: 10px;    /* مسافة بين الصورة وباقي محتويات البطاقة */     
+        }
+        .card h2 {
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-align: center;
+            margin: 5px 0;
+        }
+        .card {
+            background-color: #1A2238;
+            border-radius: 10px;
+            border: 1px solid gray;
+            padding: 10px;
+            margin:20px; /* المسافه بين الكروت ما الفرق بينها وبين الgap */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s; /* ابحث */
+            width: 220px;
+            text-align: center;
+        }
+        .card:hover {
+            transform: scale(1.05);  /* تكبير الصورة قليلاً عند المرور */
+            opacity: 0.8;            /* تقليل الشفافية */
+        }
+        .card-link {
+            display: inline-block;
+            padding: 5px 8px;
+            font-size: 10px;
+            color: white;
+            background-color: lightslategray;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 5px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body class="body">
+    <header>
+        <h1 class="header">المعسكرات التدريبية المتوفرة</h1>
+        <p class="description">معسكرات برمج تنقلك نقلة نوعية من مبتدئ إلى محترف في عالم البرمجة<br>
+        تختلف المعسكرات عن المسارات الأساسية بأنها تحتوي على مادة أعمق وبها تركيز أكبر</p>
+    </header>
+
+    <main>
+            <section class="cards-container">
+            <div class="card">
+                <img src="LaravelPHP.jpg" alt="" class="card-image">
+                <a href="#" class="card-link"><h2>محترف برمجة PHP مع Laravel</h2></a>
+            </div>
+            <div class="card">
+                <img src="Android.jpg" alt="" class="card-image">
+                <a href="#" class="card-link"><h2>احتراف برمجة تطبيقات الأندرويد</h2></a>
+            </div>
+            <div class="card">
+                <img src="DataScience.jpeg" alt="" class="card-image">
+                <a href="#" class="card-link"><h2>مقدمة في علم البيانات الاحترافي</h2></a>
+            </div>
+            <div class="card">
+                <img src="WebDevelopment.jpeg" alt="" class="card-image">
+                <a href="#" class="card-link"><h2>مطوّر Full-Stack للويب الاحترافي</h2></a>
+            </div>
+        </section>
+    </main>    
+</body>
+<footer style="text-align: center; padding: 10px; color: white; font-size: small;">
+    <p>© 2024 جميع الحقوق محفوظة - معسكرات برمج</p>
+</footer>
+</html>
